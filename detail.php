@@ -31,7 +31,6 @@ $id = $_REQUEST["id"];
     try {
         $dbh = new PDO($dsn, $user, $password);
         $id = strval($id);
-        print($id);
 
         $sql = 'select * from pokemon_status WHERE dict_num = \''.$id.'\'';
         $row = $dbh->query($sql);
